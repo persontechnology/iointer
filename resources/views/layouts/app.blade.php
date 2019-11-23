@@ -24,6 +24,9 @@
         <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/js/popper.min.js') }}"></script>
         <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+        <script src="{{ asset('assets/js/notify.min.js') }}"></script>
         @stack('linksCabeza')
     </head>
 
@@ -117,10 +120,36 @@
         </header>
         <!-- End Header Area -->
 
+        @yield('breadcrumbs')
+
+        @if ($errors->any())
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Solucione los siguentes errores!</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        @foreach (['success', 'warn', 'info', 'error'] as $msg)
+            @if(Session::has($msg))
+            <script>
+                $.notify("{{ Session::get($msg) }}", "{{ $msg }}");
+            </script>
+            @endif
+        @endforeach
+                
         @yield('content')
 
         <!-- Start Footer Area -->
         <footer class="footer-area">
+            
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -185,7 +214,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="copyright-area">
                 <div class="container">
                     <p><i class="far fa-copyright"></i> Copyright {{ config('app.name','INTERNET') }} {{ date('Y') }} Todos los derechos reservados</p>
@@ -206,5 +235,33 @@
         <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
         <script src="{{ asset('assets/js/main.js') }}"></script>
         @stack('linksPie')
+
+        <script>
+            $('[data-toggle="tooltip"]').tooltip()
+            $('table').on('draw.dt', function() {
+                $('[data-toggle="tooltip"]').tooltip();
+            })
+
+
+
+            function eliminar(arg){
+                var url=$(arg).data('url');
+                var msg=$(arg).data('title');
+                $.confirm({
+                    title: 'Confirme!',
+                    content: msg,
+                    theme: 'modern',
+                    type:'red',
+                    icon:'fas fa-exclamation-triangle',
+                    closeIcon:true,
+                    buttons: {
+                        confirmar: function () {
+                            location.replace(url);
+                        }
+                    }
+                });
+            }
+        
+        </script>
     </body>
 </html>

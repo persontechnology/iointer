@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
     // Artisan::call('cache:clear');
@@ -33,3 +32,25 @@ Route::post('/enviar-contacto', 'Estaticas@contactoEnviar')->name('contactoEnvia
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// planes
+Route::get('/planes', 'Planes@index')->name('planes');
+Route::get('/planes-nuevo', 'Planes@nuevo')->name('nuevoPlan');
+Route::post('/planes-guardar', 'Planes@guardar')->name('guardarPlan');
+Route::get('/planes-eliminar/{plan}', 'Planes@eliminar')->name('eliminarPlan');
+Route::get('/planes-editar/{plan}', 'Planes@editar')->name('editarPlan');
+Route::post('/planes-actualizar', 'Planes@actualizar')->name('actualizarPlan');
+
+
+
+// clientes
+Route::get('/clientes', 'Clientes@index')->name('clientes');
+Route::get('/clientes-nuevo', 'Clientes@nuevo')->name('nuevoCliente');
+Route::post('/clientes-guardar', 'Clientes@guardar')->name('guardarCliente');
+Route::get('/clientes-eliminar/{cliente}', 'Clientes@eliminar')->name('eliminarCliente');
+Route::get('/clientes-editar/{cliente}', 'Clientes@editar')->name('editarCliente');
+Route::post('/clientes-actualizar', 'Clientes@actualizar')->name('actualizarCliente');
+
+
+
+
