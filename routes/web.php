@@ -13,6 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
+    // Artisan::call('cache:clear');
+    // Artisan::call('config:clear');
+    // Artisan::call('config:cache');
+    // Artisan::call('storage:link');
+    // Artisan::call('key:generate');
+    // Artisan::call('migrate:fresh --seed');
 });
 
 // estaticas
