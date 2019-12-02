@@ -2,7 +2,7 @@
     <li class="nav-item"><a href="{{ route('home') }}" class="nav-link" id="menuInicio">Inicio</a></li>
     <li class="nav-item"><a href="{{ route('planes') }}" class="nav-link" id="menuPlanes">PLANES</a></li>
     <li class="nav-item"><a href="{{ route('clientes') }}" class="nav-link" id="menuClientes">CLIENTES</a></li>
-    <li class="nav-item"><a href="contact.html" class="nav-link">FACTURA</a></li>
+    <li class="nav-item"><a href="{{ route('facturas') }}" class="nav-link">FACTURA</a></li>
     <li class="nav-item"><a href="contact.html" class="nav-link">SOPORTE</a></li>
 @else
     <li class="nav-item"><a href="{{ url('/') }}" class="nav-link" id="menuInicio">Inicio</a></li>

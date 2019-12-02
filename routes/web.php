@@ -50,7 +50,12 @@ Route::post('/clientes-guardar', 'Clientes@guardar')->name('guardarCliente');
 Route::get('/clientes-eliminar/{cliente}', 'Clientes@eliminar')->name('eliminarCliente');
 Route::get('/clientes-editar/{cliente}', 'Clientes@editar')->name('editarCliente');
 Route::post('/clientes-actualizar', 'Clientes@actualizar')->name('actualizarCliente');
+Route::get('/clientes-editar-calendario-pagos/{cliente}', 'Clientes@editarCalendarioPagos')->name('editarCalendarioPagos');
+Route::post('/clientes-actualizar-dias-pago', 'Clientes@actualizarDiasPago')->name('actualizarDiasPago');
 
 
 
-
+// facturas
+Route::get('/facturas', 'Facturas@index')->name('facturas');
+Route::get('/facturas-nuevo', 'Facturas@nuevo')->name('nuevoFactura');
+Route::get('/facturas-realizar-factura/{user}', 'Facturas@realizarFactura')->name('realizarFactura');

@@ -5,4 +5,7 @@
     <a href="{{ route('editarCliente',$c->id) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" data-title="Editar">
         <i class="fas fa-edit"></i>
     </a>
+    <a href="{{ route('editarCalendarioPagos',$c->id) }}" class="btn btn-success" data-toggle="tooltip" data-placement="top" data-title="Calendario de pagos">
+        <i class="far fa-clock"></i>
+    </a>
 </div>

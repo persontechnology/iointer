@@ -33,3 +33,7 @@ Breadcrumbs::for('editarCliente', function ($trail,$user) {
     $trail->parent('clientes');
     $trail->push('Editar cliente', route('editarCliente',$user->id));
 });
+Breadcrumbs::for('editarCalendarioPagos', function ($trail,$user) {
+    $trail->parent('clientes');
+    $trail->push('Calendario de planes', route('editarCalendarioPagos',$user->id));
+});

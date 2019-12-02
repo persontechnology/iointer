@@ -43,7 +43,9 @@ class User extends Authenticatable
 
     public function planes()
     {
-        return $this->belongsToMany(Plan::class,'user_plans','user_id','plan_id');
+        return $this->belongsToMany(Plan::class,'user_plans','user_id','plan_id')
+        ->as('user_plans')
+        ->withPivot('id','dia');
     }
     public function hasPlan($idPlan,$idUser)
     {

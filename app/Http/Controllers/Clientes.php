@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\DataTables\ClientesDataTable;
 use App\Models\Plan;
+use App\Models\UserPlan;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -116,6 +117,35 @@ class Clientes extends Controller
             $request->session()->flash('info','Cliente no actualizado');
         }
 
+        return redirect()->route('clientes');
+    }
+
+
+    public function editarCalendarioPagos($idCliente)
+    {
+        $user=User::findOrFail($idCliente);
+        $data = array('user' => $user );
+        return view('clientes.editarCalendarioPagos',$data);
+    }
+
+    public function actualizarDiasPago(Request $request)
+    {
+        $rg_decimal="/^[0-9,]+(\.\d{0,2})?$/";
+        $request->validate([
+            'cliente'=>'required|exists:users,id',
+            'user_plans'    => 'nullable|array',
+            'user_plans.*'  => 'nullable|exists:user_plans,id',
+            'dias'    => 'nullable|array',
+            'dias.*'  => 'nullable|integer|min:1|max:31|regex:'.$rg_decimal,
+        ]);
+
+        foreach ($request->user_plans as $up) {
+            $u_p=UserPlan::findOrFail($up);
+            $u_p->dia=$request->dias[$up];
+            $u_p->save();
+        }
+
+        $request->session()->flash('success','Días de pago actualizado');
         return redirect()->route('clientes');
     }
 }

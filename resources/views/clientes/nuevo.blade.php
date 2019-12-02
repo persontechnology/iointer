@@ -105,6 +105,7 @@
     
                                 <div class="col-md-6">
                                     @foreach ($planes as $p)
+                                       
                                         <div class="form-check">
                                             <input class="form-check-input" name="planes[{{ $p->id }}]"  value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'checked':'' }}  type="checkbox" value="" id="plan_{{ $p->id }}">
                                             <label class="form-check-label" for="plan_{{ $p->id }}">
@@ -112,6 +113,7 @@
                                             </label>
                                         </div>
                                     @endforeach
+                                    
                                 </div>
                             </div>
                             @else
@@ -134,7 +136,7 @@
 @endpush
 @prepend('linksPie')
     <script>
-    $('#menuPlanes').addClass('active');  
+    $('#menuClientes').addClass('active');  
     </script>
     
 @endprepend
