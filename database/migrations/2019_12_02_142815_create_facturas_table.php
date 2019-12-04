@@ -17,11 +17,12 @@ class CreateFacturasTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('numero')->nullable();
-            $table->enum('estado',['Creado','Cancelado','Anulado'])->default('Creado');
+            $table->enum('estado',['Creado','Entregado','Anulado'])->default('Creado');
             
             $table->date('fecha');
             $table->decimal('valor',19,2);
-
+            $table->integer('dia');
+            
             $table->unsignedBigInteger('plan_id');
             $table->foreign('plan_id')->references('id')->on('plans');
 

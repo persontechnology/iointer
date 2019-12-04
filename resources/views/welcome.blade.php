@@ -170,7 +170,7 @@
 
             <div class="col-lg-4 col-md-12">
                 <div class="cta-btn">
-                    <a href="#" class="btn btn-primary">Verifique la cobertura en su área</a>
+                    <a href="{{ route('soporteEnLinea') }}" class="btn btn-primary">Soporte en línea</a>
                 </div>
             </div>
         </div>

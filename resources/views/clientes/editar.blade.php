@@ -120,6 +120,12 @@
                                 <strong>No existe planes registrados, para asignar al cliente</strong>
                             </div>
                             @endif
+
+                            <hr>
+                            <label for="">Selecione ubicación</label>
+                            <div id="map"></div>
+                            <input type="hidden" id="lat" name="lat" value="{{ old('lat',$c->lat) }}">
+                            <input type="hidden" id="lng" name="lng" value="{{ old('lng',$c->lng) }}">
                     </div>
                     <div class="card-footer text-muted">
                         <button type="submit" class="btn btn-primary">Guardar</button>
@@ -138,6 +144,38 @@
     $('#menuPlanes').addClass('active');  
     </script>
     
+    <script>
+
+            // The following example creates a marker in Stockholm, Sweden using a DROP
+            // animation. Clicking on the marker will toggle the animation between a BOUNCE
+            // animation and no animation.
+        
+            var marker;
+            var  lat_c={{ $c->lat}};
+            var  lng_c={{ $c->lng}};
+            function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: {lat: lat_c, lng: lng_c}
+                });
+        
+                marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: {lat: lat_c, lng: lng_c}
+                });
+                
+                marker.addListener('drag', function(event){
+                    $('#lat').val(event.latLng.lat());
+                    $('#lng').val(event.latLng.lng());
+                });
+            }
+        
+            </script>
+    
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Ko6qUa0EFuDWr77BpNJOdxD-QLstjBk&callback=initMap">
+        </script>
 @endprepend
 
 @endsection

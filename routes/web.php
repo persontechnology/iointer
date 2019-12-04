@@ -29,7 +29,7 @@ Route::get('/preguntas', 'Estaticas@preguntas')->name('preguntas');
 Route::get('/contacto', 'Estaticas@contacto')->name('contacto');
 Route::post('/enviar-contacto', 'Estaticas@contactoEnviar')->name('contactoEnviar');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -57,5 +57,14 @@ Route::post('/clientes-actualizar-dias-pago', 'Clientes@actualizarDiasPago')->na
 
 // facturas
 Route::get('/facturas', 'Facturas@index')->name('facturas');
-Route::get('/facturas-nuevo', 'Facturas@nuevo')->name('nuevoFactura');
+Route::get('/facturas-detalle/{factura}', 'Facturas@detalle')->name('facturaDetalle');
 Route::get('/facturas-realizar-factura/{user}', 'Facturas@realizarFactura')->name('realizarFactura');
+Route::post('/facturas-generar', 'Facturas@generar')->name('generarFactura');
+Route::get('/facturas-anular/{factura}', 'Facturas@anular')->name('anularFactura');
+
+// soporte en linea
+Route::get('/soporte-en-linea', 'Estaticas@soporteEnLinea')->name('soporteEnLinea');
+Route::post('/soporte-en-linea-crear', 'Estaticas@crearSoporte')->name('crearSoporte');
+Route::get('/soporte-en-linea-solucion/{soporte}', 'Estaticas@solucionSoporte')->name('solucionSoporte');
+Route::get('/soporte-en-linea-cargar-chat/{soporte}', 'Estaticas@cargarChat')->name('cargarChat');
+Route::post('/soporte-en-linea-guardar-char-cliente', 'Estaticas@guardaChatCliente')->name('guardaChatCliente');

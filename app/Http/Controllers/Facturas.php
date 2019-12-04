@@ -8,7 +8,7 @@ use App\Models\Factura;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use PDF;
 class Facturas extends Controller
 {
     public function __construct()
@@ -24,15 +24,16 @@ class Facturas extends Controller
             foreach ($user_m->planes as $plan) {
                 
                 $factura=Factura::where('user_id',$user_m->id)
-                ->where('plan_id',$plan->id)->where('fecha',Carbon::now()->toDateString())
+                ->where('plan_id',$plan->id)->whereMonth('fecha',Carbon::now()->month)
                 ->first();
 
                 if(!$factura){
                     $factura=new Factura();
                     $factura->user_id=$user_m->id;
                     $factura->plan_id=$plan->id;
-                    $factura->fecha=Carbon::now()->toDateString();
+                    $factura->fecha=Carbon::now();
                     $factura->valor=$plan->valor;
+                    $factura->dia=$plan->user_plans->dia??0;
                     $factura->save();
                 }
 
@@ -43,14 +44,37 @@ class Facturas extends Controller
         return $dataTable->render('facturas.index');
     }
 
-    public function nuevo(UsuariosDataTable $dataTable)
+    public function detalle($idFactura)
     {
-        return $dataTable->render('facturas.nuevo');
+        $factura=Factura::findOrFail($idFactura);
+        $data = array('factura' => $factura );
+        return view('facturas.detalle',$data);
     }
 
-    public function realizarFactura($idUser)
+    public function realizarFactura($idFactura)
     {
-        $user=User::findOrFail($idUser);
-        return $user->planes->pluck('user_plans.dia');
+        $factura=Factura::findOrFail($idFactura);
+        $data = array('factura' => $factura );
+        $pdf = PDF::loadView('facturas.pdf', $data);
+        return $pdf->inline('factura.pdf');
+    }
+
+    public function generar(Request $request)
+    {
+        $factura=Factura::findOrFail($request->factura);
+        $factura->numero=$request->numero;
+        $factura->estado='Entregado';
+        $factura->save();
+        $request->session()->flash('success','Factura '.$factura->numero.' generado exitosamente');
+        return redirect()->route('facturaDetalle',$factura->id);
+    }
+
+    public function anular(Request $request, $idFactura)
+    {
+        $factura=Factura::findOrFail($idFactura);
+        $factura->estado='Anulado';
+        $factura->save();
+        $request->session()->flash('info','Factura '.$factura->numero.' anulado exitosamente');
+        return redirect()->route('facturaDetalle',$factura->id);
     }
 }

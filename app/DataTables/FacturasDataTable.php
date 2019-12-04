@@ -21,7 +21,39 @@ class FacturasDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', 'facturas.action');
+            ->editColumn('user_id',function($fa){
+                return view('facturas.user',['fa'=>$fa])->render();
+            })
+            ->editColumn('plan_id',function($fa){
+                return $fa->plan->nombre;
+            })
+            ->editColumn('estado',function($fa){
+                return view('facturas.estado',['fa'=>$fa])->render();
+            })
+            ->filterColumn('user_id',function($query, $keyword){
+                $query->whereHas('user', function($query) use ($keyword) {
+                    $query->whereRaw("cedula like ?", ["%{$keyword}%"]);
+                });            
+            })
+            ->filterColumn('dia',function($query, $keyword){
+                $query->whereHas('user', function($query) use ($keyword) {
+                    $query->whereRaw("concat(nombres,' ',apellidos) like ?", ["%{$keyword}%"]);
+                });            
+            })
+            ->filterColumn('valor',function($query, $keyword){
+                $query->whereHas('user', function($query) use ($keyword) {
+                    $query->whereRaw("email like ?", ["%{$keyword}%"]);
+                });            
+            })
+            ->filterColumn('plan_id',function($query, $keyword){
+                $query->whereHas('plan', function($query) use ($keyword) {
+                    $query->whereRaw("nombre like ?", ["%{$keyword}%"]);
+                });            
+            })
+
+            ->addColumn('action', function($fa){
+                return view('facturas.accion',['fa'=>$fa])->render();
+            })->rawColumns(['action','user_id','estado']);
     }
 
     /**
@@ -49,7 +81,7 @@ class FacturasDataTable extends DataTable
                     ->dom('Bfrtip')
                     ->orderBy(1)
                     ->buttons(
-                        Button::make('create'),
+                        // Button::make('create'),
                         Button::make('export'),
                         Button::make('print'),
                         Button::make('reset'),
@@ -69,12 +101,15 @@ class FacturasDataTable extends DataTable
                   ->exportable(false)
                   ->printable(false)
                   ->width(60)
+                  ->title('Acción')
                   ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('user_id'),
-            Column::make('plan_id'),
+            Column::make('numero')->title('# factura'),
+            Column::make('user_id')->title('Cliente'),
+            Column::make('plan_id')->title('Plan'),
             Column::make('valor'),
             Column::make('estado'),
+            Column::make('fecha')->title('Generado el'),
+            Column::make('dia')->title('Día de pago'),
         ];
     }
 

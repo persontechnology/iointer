@@ -50,6 +50,8 @@ class Clientes extends Controller
             $user->telefono=$request->telefono;
             $user->email=$request->email;
             $user->direccion=$request->direccion;
+            $user->lat=$request->lat;
+            $user->lng=$request->lng;
             $user->save();
             $user->assignRole('Cliente');
             $user->planes()->sync($request->planes);
@@ -110,6 +112,8 @@ class Clientes extends Controller
             $user->telefono=$request->telefono;
             $user->email=$request->email;
             $user->direccion=$request->direccion;
+            $user->lat=$request->lat;
+            $user->lng=$request->lng;
             $user->save();
             $user->planes()->sync($request->planes);
             $request->session()->flash('success','Nuevo cliente actualizado exitosamente');

@@ -51,6 +51,11 @@
 
                         <div class="col-lg-7 col-md-7">
                             <div class="top-header-right">
+                                <div class="login-signup-btn">
+                                    <p>
+                                        <a href="{{ route('soporteEnLinea') }}" id="menuSoporteEnLinea">Soporte en linea</a>
+                                    </p>
+                                </div>
                                 <ul class="social">
                                     <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>

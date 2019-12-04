@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('cedula')->nullable();
             $table->string('telefono')->nullable();
             $table->string('direccion')->nullable();
+            $table->string('lat')->default('-0.941839');
+            $table->string('lng')->default('-79.231626');
         });
     }
 

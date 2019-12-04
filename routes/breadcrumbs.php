@@ -37,3 +37,14 @@ Breadcrumbs::for('editarCalendarioPagos', function ($trail,$user) {
     $trail->parent('clientes');
     $trail->push('Calendario de planes', route('editarCalendarioPagos',$user->id));
 });
+
+
+// facturas
+Breadcrumbs::for('facturas', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Facturas', route('facturas'));
+});
+Breadcrumbs::for('facturaDetalle', function ($trail,$factura) {
+    $trail->parent('facturas');
+    $trail->push('Detalle de factura', route('facturaDetalle',$factura->id));
+});

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('breadcrumbs', Breadcrumbs::render('clientes'))
+@section('breadcrumbs', Breadcrumbs::render('facturas'))
 
 @section('content')
 <div class="container mt-2 mb-2">
@@ -9,9 +9,6 @@
             <div class="card">
                 <div class="card-header">
                     Facturas
-                    <a href="{{ route('nuevoFactura') }}" class="btn btn-info float-right" data-toggle="tooltip" data-placement="top" title="Nuevo factura">
-                        <i class="fas fa-plus"></i>
-                    </a>
                 </div>
 
                 <div class="card-body">
@@ -33,7 +30,7 @@
 @endpush
 @prepend('linksPie')
     <script>
-    $('#menuClientes').addClass('active');  
+    $('#menuFactura').addClass('active');  
     </script>
     {!! $dataTable->scripts() !!}
 @endprepend
