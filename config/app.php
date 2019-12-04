@@ -181,6 +181,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Tavo\EcLaravelValidator\EcValidatorServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
+        
 
 
     ],

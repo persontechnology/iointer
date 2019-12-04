@@ -10,6 +10,7 @@ return array(
     'App\\DataTables\\ClientesDataTable' => $baseDir . '/app/DataTables/ClientesDataTable.php',
     'App\\DataTables\\FacturasDataTable' => $baseDir . '/app/DataTables/FacturasDataTable.php',
     'App\\DataTables\\PlanesDataTable' => $baseDir . '/app/DataTables/PlanesDataTable.php',
+    'App\\DataTables\\SoportesDataTable' => $baseDir . '/app/DataTables/SoportesDataTable.php',
     'App\\DataTables\\UsuariosDataTable' => $baseDir . '/app/DataTables/UsuariosDataTable.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',

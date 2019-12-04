@@ -568,6 +568,7 @@ class ComposerStaticInita0efad85469806bd7e246c0f97101a07
         'App\\DataTables\\ClientesDataTable' => __DIR__ . '/../..' . '/app/DataTables/ClientesDataTable.php',
         'App\\DataTables\\FacturasDataTable' => __DIR__ . '/../..' . '/app/DataTables/FacturasDataTable.php',
         'App\\DataTables\\PlanesDataTable' => __DIR__ . '/../..' . '/app/DataTables/PlanesDataTable.php',
+        'App\\DataTables\\SoportesDataTable' => __DIR__ . '/../..' . '/app/DataTables/SoportesDataTable.php',
         'App\\DataTables\\UsuariosDataTable' => __DIR__ . '/../..' . '/app/DataTables/UsuariosDataTable.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
