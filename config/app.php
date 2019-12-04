@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         // extras
+        Yajra\DataTables\DataTablesServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Tavo\EcLaravelValidator\EcValidatorServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
@@ -233,6 +234,7 @@ return [
         // extras
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
     ],
 
