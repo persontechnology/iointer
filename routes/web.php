@@ -68,3 +68,13 @@ Route::post('/soporte-en-linea-crear', 'Estaticas@crearSoporte')->name('crearSop
 Route::get('/soporte-en-linea-solucion/{soporte}', 'Estaticas@solucionSoporte')->name('solucionSoporte');
 Route::get('/soporte-en-linea-cargar-chat/{soporte}', 'Estaticas@cargarChat')->name('cargarChat');
 Route::post('/soporte-en-linea-guardar-char-cliente', 'Estaticas@guardaChatCliente')->name('guardaChatCliente');
+
+
+// soporte
+Route::get('/soporte', 'Soportes@index')->name('soporte');
+Route::post('/soporte-cambiar-estado', 'Soportes@estado')->name('cambiarEstadoSoporte');
+Route::get('/soporte-eliminar/{soporte}', 'Soportes@eliminar')->name('eliminarSoporte');
+Route::get('/soporte-chat-solucion/{soporte}', 'Soportes@chat')->name('chatSolucion');
+Route::post('/soporte-chat-guardar', 'Soportes@guardarChat')->name('guardaChatAdmin');
+
+

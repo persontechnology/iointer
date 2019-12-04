@@ -24,7 +24,7 @@ class CreateSoportesTable extends Migration
             $table->string('direccion')->nullable();
             $table->string('lat')->nullable();
             $table->string('lng')->nullable();
-            $table->enum('estado',['Ingresado','Verificado','Atendido','Anulado'])->default('Ingresado');
+            $table->enum('estado',['Ingresado','Atendido','Anulado'])->default('Ingresado');
             
         });
     }

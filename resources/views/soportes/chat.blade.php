@@ -1,22 +1,9 @@
 @extends('layouts.app')
 
+@section('breadcrumbs', Breadcrumbs::render('chatSolucion',$soporte))
 @section('content')
 
 
-    
-<!-- Start Page Title Area -->
-    <div class="page-title-area">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>Soporte ne línea</h2>
-                <ul>
-                    <li><a href="{{ url('/') }}">Inicio</a></li>
-                    <li>Soporte en línea</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!-- End Page Title Area -->
 
 <!-- Start About Area -->
 <section class="about-area mt-2">
@@ -138,7 +125,7 @@
             </div>
             <div class="col-md-8">
 
-                <form action="{{ route('guardaChatCliente') }}" id="signupForm" method="POST">
+                <form action="{{ route('guardaChatAdmin') }}" id="signupForm" method="POST">
                     @csrf
                     <input type="hidden" name="soporte" value="{{ $soporte->id }}">
                     <div class="input-group">
@@ -188,7 +175,7 @@
     
 
     <script>
-    $('#menuSoporteEnLinea').addClass('text-warning');  
+    $('#menuSoporte').addClass('active');  
 
     
 
@@ -237,8 +224,8 @@
 
     cargar();
 
-
     setInterval(cargar, 5000);
+    
 
     </script>
 

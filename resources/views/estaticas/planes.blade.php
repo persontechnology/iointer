@@ -10,7 +10,10 @@
                 <span>Precios de {{ config('app.name','INTERNET') }}</span>
             </span>
             <h2>Descubre nuestros mejores planes</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices.</p>
+            <h3 class="text-danger">Costos de la instalación gratis</h3>
+            <p>
+                Solo paga el valor de la suscripción 
+            </p>
         </div>
 
         <div class="row">
@@ -21,26 +24,26 @@
                             <i class="flaticon-online-shop"></i>
                         </div>
 
-                        <span>TV + Internet</span>
-                        <h3>Paquete de jugador</h3>
+                        <span>Plan Básico</span>
+                        <h3>Paquete estudiantil</h3>
                     </div>
 
                     <ul class="pricing-features-list">
-                        <li><i class="flaticon-check-mark"></i> Más de 150 canales</li>
-                        <li><i class="flaticon-check-mark"></i> Ponerse al día y bajo demanda</li>
-                        <li><i class="flaticon-check-mark"></i> Conexión de teléfono celular</li>
-                        <li><i class="flaticon-check-mark"></i> Fibra de hasta 100 Mbps</li>
-                        <li><i class="flaticon-check-mark"></i> Hecho para 1-4 dispositivos</li>
+                        <li><i class="flaticon-check-mark"></i> Navega y descarga ilimitadamente</li>
+                        <li><i class="flaticon-check-mark"></i> 2 Megas de Bajada/Subida</li>
+                        <li><i class="flaticon-check-mark"></i> 2048 Kbps</li>
+                        <li><i class="flaticon-check-mark"></i> Compartición 2:1</li>
+                        <li><i class="flaticon-check-mark"></i> Incluye Route Wifi</li>
                     </ul>
 
                     <div class="price">
                         <span>Desde</span>
                         <span>$</span>
-                        24.99
+                        19.99
                         <span>/mes</span>
                     </div>
 
-                    <a href="#" class="view-plans-btn">Ver planes</a>
+                    <a href="{{ route('precios') }}" class="view-plans-btn">Ver planes</a>
 
                     <div class="image-box">
                         <img src="{{ asset('assets/img/shape-image/2.png') }}" alt="image">
@@ -56,16 +59,16 @@
                             <i class="flaticon-online-shop"></i>
                         </div>
 
-                        <span>TV + Internet</span>
-                        <h3>{{ config('app.name','INTERNET') }} TV Box</h3>
+                        <span>Plan Hogar</span>
+                        <h3>Paquete hogar</h3>
                     </div>
 
                     <ul class="pricing-features-list">
-                        <li><i class="flaticon-check-mark"></i> Más de 150 canales</li>
-                        <li><i class="flaticon-check-mark"></i> Ponerse al día y bajo demanda</li>
-                        <li><i class="flaticon-check-mark"></i> Conexión de teléfono celular</li>
-                        <li><i class="flaticon-check-mark"></i> Fibra de hasta 100 Mbps</li>
-                        <li><i class="flaticon-check-mark"></i> Hecho para 1-4 dispositivos</li>
+                        <li><i class="flaticon-check-mark"></i> Navega y descarga ilimitadamente</li>
+                        <li><i class="flaticon-check-mark"></i> 3.5 Megas de Bajada/subida</li>
+                        <li><i class="flaticon-check-mark"></i> 3584 Kbps</li>
+                        <li><i class="flaticon-check-mark"></i> Compartición 2:1</li>
+                        <li><i class="flaticon-check-mark"></i> Incluye Route Wifi</li>
                     </ul>
 
                     <div class="price">
@@ -75,7 +78,7 @@
                         <span>/mes</span>
                     </div>
 
-                    <a href="#" class="view-plans-btn">Ver planes</a>
+                    <a href="{{ route('precios') }}" class="view-plans-btn">Ver planes</a>
 
                     <div class="image-box">
                         <img src="{{ asset('assets/img/shape-image/2.png') }}" alt="image">
@@ -91,16 +94,16 @@
                             <i class="flaticon-online-shop"></i>
                         </div>
 
-                        <span>TV + Internet</span>
-                        <h3>Banda ancha y WIFI</h3>
+                        <span>Plan Xtreme</span>
+                        <h3>Paquete negocio</h3>
                     </div>
 
                     <ul class="pricing-features-list">
-                        <li><i class="flaticon-check-mark"></i> Más de 150 canales</li>
-                        <li><i class="flaticon-check-mark"></i> Ponerse al día y bajo demanda</li>
-                        <li><i class="flaticon-check-mark"></i> Conexión de teléfono celular</li>
-                        <li><i class="flaticon-check-mark"></i> Fibra de hasta 100 Mbps</li>
-                        <li><i class="flaticon-check-mark"></i> Hecho para 1-4 dispositivos</li>
+                        <li><i class="flaticon-check-mark"></i> Navega y descarga ilimitadamente</li>
+                        <li><i class="flaticon-check-mark"></i> 6 Megas de Bajada/subida</li>
+                        <li><i class="flaticon-check-mark"></i> 6144 Kbps</li>
+                        <li><i class="flaticon-check-mark"></i> Compartición 2:1</li>
+                        <li><i class="flaticon-check-mark"></i> Incluye Route Wifi</li>
                     </ul>
 
                     <div class="price">
@@ -110,7 +113,7 @@
                         <span>/mes</span>
                     </div>
 
-                    <a href="#" class="view-plans-btn">Ver planes</a>
+                    <a href="{{ route('precios') }}" class="view-plans-btn">Ver planes</a>
 
                     <div class="image-box">
                         <img src="{{ asset('assets/img/shape-image/2.png') }}" alt="image">

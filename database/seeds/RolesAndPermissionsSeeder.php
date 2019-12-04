@@ -26,7 +26,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         $user= User::firstOrCreate([
             'name' => 'jonathan',
-            'email' => 'soysoftware@gmail.com',
+            'email' => 'fueres10@gmail.com',
             'password' => Hash::make('12345678')
         ]);
         $user->assignRole('Administrador');

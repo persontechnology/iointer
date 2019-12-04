@@ -9,7 +9,7 @@
                 
                 <span>Servicios de {{ config('app.name','INTERNET') }}</span>
             </span>
-            <h2>Explore las próximas posibilidades ilimitadas de Isp</h2>
+            <h2>Explore las próximas posibilidades ilimitadas de INTERNET</h2>
         </div>
 
         <div class="row">
@@ -19,11 +19,13 @@
                         <i class="flaticon-router"></i>
                     </div>
 
-                    <h3>Banda ancha casera</h3>
+                    <h3>Banda ancha</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Navega en Internet, envía correos, compra, comparte, juega… ¡y mucho más!
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
 
@@ -35,9 +37,11 @@
 
                     <h3>Inicio wifi</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Disfruta de contenidos multimedia, entretenimiento y juegos en línea. Con nuestros productos
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
 
@@ -47,11 +51,13 @@
                         <i class="flaticon-wifi-signal-tower"></i>
                     </div>
 
-                    <h3>Televisión satelital</h3>
+                    <h3>IP TV</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Conocido como TV por Internet, hace referencia a la transmisión de vídeo en streaming a través de la red
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
 
@@ -61,11 +67,13 @@
                         <i class="flaticon-online-shop"></i>
                     </div>
 
-                    <h3>Nexa TV Box</h3>
+                    <h3>Mantenimiento de equipos informáticos</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Despreocúpese de los problemas informáticos que le puedan ocasionar su hardware o software a través de nuestro mantenimiento informático
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
 
@@ -75,11 +83,13 @@
                         <i class="flaticon-key"></i>
                     </div>
 
-                    <h3>Conexión móvil</h3>
+                    <h3>Internet por fichas</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Paquetes con todo lo necesario para empezar a vender internet por fichas para todo tipo de negocio, solo para conectar y empezar a generar ganancias
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
 
@@ -89,11 +99,13 @@
                         <i class="flaticon-shield"></i>
                     </div>
 
-                    <h3>Seguridad de casa</h3>
+                    <h3>Sistema de vigilancia</h3>
 
-                    <p>Lorem ipsudolorsitamet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>
+                        Disponemos de todo tipo de aparatos para la detección inmediata o vigilancia de un proceso con ayuda técnica, con la utilización de sensores y cámaras de ultima tecnología
+                    </p>
 
-                    <a href="#" class="read-more-btn">Lee mas <i class="flaticon-arrow-pointing-to-right"></i></a>
+                    <a href="{{ route('servicios') }}" class="read-more-btn">Lee más <i class="flaticon-arrow-pointing-to-right"></i></a>
                 </div>
             </div>
         </div>

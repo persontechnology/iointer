@@ -48,3 +48,15 @@ Breadcrumbs::for('facturaDetalle', function ($trail,$factura) {
     $trail->parent('facturas');
     $trail->push('Detalle de factura', route('facturaDetalle',$factura->id));
 });
+
+
+// soporte
+
+Breadcrumbs::for('soporte', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Soporte', route('soporte'));
+});
+Breadcrumbs::for('chatSolucion', function ($trail,$soporte) {
+    $trail->parent('soporte');
+    $trail->push('Chat de soporte', route('chatSolucion',$soporte->id));
+});

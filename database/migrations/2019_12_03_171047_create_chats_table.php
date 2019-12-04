@@ -20,10 +20,10 @@ class CreateChatsTable extends Migration
             $table->text('mensaje');
             
             $table->unsignedBigInteger('soporte_id');
-            $table->foreign('soporte_id')->references('id')->on('users');
+            $table->foreign('soporte_id')->references('id')->on('soportes')->onDelete('cascade');
 
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

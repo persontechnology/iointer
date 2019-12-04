@@ -45,7 +45,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-5 col-md-5">
                             <div class="top-header-left">
-                                <p><span>Llame ahora al:</span> <a href="#">+(593) 123456789</a></p>
+                                <p><span>Llame ahora al:</span> <a href="#">+(593) 939151912</a></p>
                             </div>
                         </div>
 
@@ -73,7 +73,7 @@
                 <div class="bahama-mobile-nav">
                     <div class="logo">
                         <a href="{{ url('/') }}">
-                            <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+                            <img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="45px" class="bg-white border border-danger">
                         </a>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="container">
                         <nav class="navbar navbar-expand-md navbar-light">
                             <a class="navbar-brand" href="{{ url('/') }}">
-                                <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+                                <img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="45px;" class="bg-white border border-danger">
                             </a>
 
                             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -160,30 +160,18 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
                             <div class="logo">
-                                <a href="#"><img src="{{ asset('assets/img/logo.png') }}" alt="image"></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sda.</p>
+                                <a href="{{ url('/') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="image" class="bg-white border border-danger"></a>
                             </div>
-
-                            <form class="newsletter-form" data-toggle="validator">
-                                <input type="email" class="newsletter-input" placeholder="Tu correo eléctronico" name="EMAIL" required autocomplete="off">
-                                <button type="submit"><i class="flaticon-paper-plane"></i></button>
-                                <div id="validator-newsletter" class="form-result"></div>
-                            </form>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h3>Servicios al cliente</h3>
-
-                            <ul class="services-widget-list">
-                                <li><a href="#">Mi {{ config('app.name','INTERNET') }}</a></li>
-                                <li><a href="#">{{ config('app.name','INTERNET') }} Media</a></li>
-                                <li><a href="#">Conexión y configuración</a></li>
-                                <li><a href="#">Soporte</a></li>
-                                <li><a href="#">Videos tutoriales</a></li>
-                                <li><a href="#">{{ config('app.name','INTERNET') }} Aplicación</a></li>
-                            </ul>
+                            <h3>Acerca de nosotros</h3>
+<br>
+                            <p class="text-justify">
+                                Somos una empresa de telecomunicaciones proveedora de internet de Alta Velocidad a través de Radio Enlace hasta el hogar. Nuestro equipo está conformado por técnicos y personal altamente calificado.
+                            </p>
                         </div>
                     </div>
 
@@ -192,12 +180,13 @@
                             <h3>Enlaces útiles</h3>
 
                             <ul class="links-widget-list">
-                                <li><a href="#">Mapa de cobertura</a></li>
-                                <li><a href="#">Noticias</a></li>
-                                <li><a href="#">Términos y Condiciones</a></li>
-                                <li><a href="#">Licencia</a></li>
-                                <li><a href="#">Testimonios</a></li>
-                                <li><a href="#">Nuestros Patrocinadores</a></li>
+                                <li><a href="https://www.speedtest.net/es" target="_blanck">Test de Velocidad</a></li>
+                                <li><a href="https://www.arcotel.gob.ec/" target="_blanck">Agencia de regulación y control de las telecomunicaciones</a></li>
+                                <li><a href="https://www.telecomunicaciones.gob.ec/" target="_blanck">Mintel</a></li>
+                                <li><a href="https://www.internetsociety.org/es/" target="_blanck">Internet society</a></li>
+                                <li><a href="https://www.ecucert.gob.ec/" target="_blanck">Ecucert</a></li>
+                                <li><a href="https://www.avast.com/es-ww/index#pc" target="_blanck">Avast</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -208,11 +197,10 @@
 
                             <div class="widget-contact-info">
                                 <p>
-                                    <a href="#">+(593) 123456789</a>
+                                    <a href="#">+(593) 939151912</a>
                                     <span>(Servicio y soporte al cliente)</span>
-                                    <a href="#">+(593) 123456789</a>
-                                    <span>(Para nuevo clientes)</span>
-                                    LATACUNGA-ECUADOR
+                                    
+                                    LA MANÁ-ECUADOR
                                 </p>
                             </div>
                         </div>
