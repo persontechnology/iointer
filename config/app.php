@@ -181,7 +181,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Tavo\EcLaravelValidator\EcValidatorServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
-
+        DaveJamesMiller\Breadcrumbs\BreadcrumbsServiceProvider::class
 
     ],
 
@@ -236,6 +236,7 @@ return [
         // extras
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        "Breadcrumbs" => DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs::class 
 
     ],
 
