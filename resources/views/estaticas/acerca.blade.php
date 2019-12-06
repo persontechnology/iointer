@@ -5,12 +5,16 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="about-content">
                         <span class="sub-title"><i class="flaticon-care-about-environment"></i> Sobre {{ config('app.name','INTERNET') }}</span>
-                        <h2>Descubra un mundo más amplio de recreación</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                        <h2>Quiénes somos</h2>
+                        <p class="text-justify">
+                            Somos una empresa de telecomunicaciones proveedora de internet de Alta Velocidad a través de Radio Enlace hasta el hogar. Nuestro equipo está conformado por técnicos y personal altamente calificado.
+                        </p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h2>Nuestro objetivo</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="text-justify">
+                            El principal objetivo de nuestra empresa es proveer a todo el Ecuador con el servicio de internet de calidad y satisfacer las necesidades de nuestros clientes y que se sigan sumando ah esta gran familia de Pato Net.
+                        </p>
                     </div>
                 </div>
 

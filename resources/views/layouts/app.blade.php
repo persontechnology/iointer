@@ -181,7 +181,7 @@
 
                             <ul class="links-widget-list">
                                 <li><a href="https://www.speedtest.net/es" target="_blanck">Test de Velocidad</a></li>
-                                <li><a href="https://www.arcotel.gob.ec/" target="_blanck">Agencia de regulación y control de las telecomunicaciones</a></li>
+                                <li><a href="https://www.arcotel.gob.ec/" target="_blanck">Arcotel</a></li>
                                 <li><a href="https://www.telecomunicaciones.gob.ec/" target="_blanck">Mintel</a></li>
                                 <li><a href="https://www.internetsociety.org/es/" target="_blanck">Internet society</a></li>
                                 <li><a href="https://www.ecucert.gob.ec/" target="_blanck">Ecucert</a></li>
@@ -197,8 +197,13 @@
 
                             <div class="widget-contact-info">
                                 <p>
-                                    <a href="#">+(593) 939151912</a>
-                                    <span>(Servicio y soporte al cliente)</span>
+                                    <span>Tlf:(Servicio y soporte al cliente)</span>
+                                    
+                                    <a href="https://wa.me/593939151912" class="text-warning" target="_blank">
+                                    <strong>+(593) 939151912</strong></a>
+                                    <span>Email:</span>
+                                    <strong class="text-warning">patonet.isp@gmail.com</strong> <br>
+                                    
                                     
                                     LA MANÁ-ECUADOR
                                 </p>

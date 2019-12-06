@@ -20,131 +20,91 @@
     <div class="container">
         <div class="single-team-member">
             <div class="member-image">
-                <img src="{{ asset('assets/img/team-img1.jpg') }}" alt="image">
+                <img src="https://image.flaticon.com/icons/svg/1750/1750161.svg" alt="image" class="bg-secondary">
             </div>
 
             <div class="member-content">
-                <h3>Agaton Ronald</h3>
+                <h3>GRIGSON SALTOS</h3>
                 <span>CEO y Fundador</span>
 
                 <ul class="info">
-                    <li><span>Experiencia:</span> 7 años</li>
-                    <li><span>Teléfono:</span> <a href="#">+2(976) 432-998</a></li>
-                    <li><span>E-mail:</span> <a href="#">info@yoursitename.com</a></li>
-                    <li><span>Ubicación:</span> LATACUNGA-ECUADOR</li>
-                </ul>
-
-                <ul class="social">
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><span>Experiencia:</span> 10 años</li>
+                    <li><span>Teléfono:</span> <a href="#">+(593) 939090929</a></li>
+                    <li><span>E-mail:</span> <a href="#">grigson.patonet@gmail.com</a></li>
+                    <li><span>Ubicación:</span> LA MANÁ-ECUADOR</li>
                 </ul>
             </div>
         </div>
 
         <div class="single-team-member">
             <div class="member-image">
-                <img src="{{ asset('assets/img/team-img2.jpg') }}" alt="image">
+                <img src="https://image.flaticon.com/icons/svg/1754/1754631.svg" alt="image" class="bg-secondary">
             </div>
 
             <div class="member-content">
-                <h3>Sarah Taylor</h3>
-                <span>Trabajador</span>
+                <h3>JOSSENKA CASTRO</h3>
+                <span>Gerente General</span>
 
                 <ul class="info">
-                    <li><span>Experiencia:</span> 7 años</li>
-                    <li><span>Teléfono:</span> <a href="#">+2(976) 432-998</a></li>
-                    <li><span>E-mail:</span> <a href="#">info@yoursitename.com</a></li>
-                    <li><span>Ubicación:</span> LATACUNGA-ECUADOR</li>
+                    <li><span>Experiencia:</span> 5 años</li>
+                    <li><span>E-mail:</span> <a href="#">jossenka.patonet@gmail.com</a></li>
+                    <li><span>Ubicación:</span> LA MANÁ-ECUADOR</li>
                 </ul>
 
-                <ul class="social">
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
             </div>
         </div>
 
         <div class="single-team-member">
             <div class="member-image">
-                <img src="{{ asset('assets/img/team-img3.jpg') }}" alt="image">
+                <img src="https://image.flaticon.com/icons/svg/1067/1067617.svg" alt="image" class="bg-secondary">
             </div>
 
             <div class="member-content">
-                <h3>Robert Reed</h3>
-                <span>Trabajador</span>
+                <h3>LA MANÁ-ECUADOR</h3>
+                <span>Soporte Técnico /Certificado en Mikrotik</span>
 
                 <ul class="info">
-                    <li><span>Experiencia:</span> 7 años</li>
-                    <li><span>Teléfono:</span> <a href="#">+2(976) 432-998</a></li>
-                    <li><span>E-mail:</span> <a href="#">info@yoursitename.com</a></li>
-                    <li><span>Ubicación:</span> LATACUNGA-ECUADOR</li>
+                    <li><span>Experiencia:</span> 5 años</li>
+                    <li><span>E-mail:</span> <a href="#">wilzon.patonet@gmail.com</a></li>
+                    <li><span>Ubicación:</span> GUAYAQUIL-ECUADOR</li>
                 </ul>
 
-                <ul class="social">
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
             </div>
         </div>
 
         <div class="single-team-member">
             <div class="member-image">
-                <img src="{{ asset('assets/img/team-img4.jpg') }}" alt="image">
+                <img src="https://image.flaticon.com/icons/svg/1390/1390798.svg" alt="image" class="bg-secondary">
             </div>
 
             <div class="member-content">
-                <h3>Joe Root</h3>
-                <span>Soporte</span>
+                <h3>ELIAN VERA</h3>
+                <span>Soporte Técnico</span>
 
                 <ul class="info">
-                    <li><span>Experiencia:</span> 7 años</li>
-                    <li><span>Teléfono:</span> <a href="#">+2(976) 432-998</a></li>
-                    <li><span>E-mail:</span> <a href="#">info@yoursitename.com</a></li>
-                    <li><span>Ubicación:</span> LATACUNGA-ECUADOR</li>
+                    <li><span>Experiencia:</span> 1 años</li>
+                    <li><span>E-mail:</span> <a href="#">elian.patonet@gmail.com</a></li>
+                    <li><span>Ubicación:</span> GUAYAQUIL-ECUADOR</li>
                 </ul>
 
-                <ul class="social">
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
             </div>
         </div>
 
         <div class="single-team-member">
             <div class="member-image">
-                <img src="{{ asset('assets/img/team-img5.jpg') }}" alt="image">
+                <img src="https://image.flaticon.com/icons/svg/1995/1995613.svg" alt="image" class="bg-secondary">
             </div>
 
             <div class="member-content">
-                <h3>Heather Knight</h3>
-                <span>Soporte</span>
+                <h3>ESTEFANIA ESPIN</h3>
+                <span>Secretaria</span>
 
                 <ul class="info">
-                    <li><span>Experiencia:</span> 7 años</li>
-                    <li><span>Teléfono:</span> <a href="#">+2(976) 432-998</a></li>
-                    <li><span>E-mail:</span> <a href="#">info@yoursitename.com</a></li>
-                    <li><span>Ubicación:</span> LATACUNGA-ECUADOR</li>
+                    <li><span>Experiencia:</span> 5 años</li>
+                    <li><span>E-mail:</span> <a href="#">estefania.patonet@gmail.com</a></li>
+                    <li><span>Ubicación:</span> GUAYAQUIL-ECUADOR</li>
                 </ul>
 
-                <ul class="social">
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                </ul>
             </div>
         </div>
     </div>

@@ -4,38 +4,30 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="offer-content">
-                        <span class="sub-title">Cuesta un poco obtener lo mejor</span>
-                        <h2>200 Mbps + {{ config('app.name','INTERNET-') }}TV</h2>
-
-                        <ul class="list">
-                            <li><i class="flaticon-online-shop"></i> MÁS DE 160 CANALES</li>
-                            <li><i class="flaticon-router"></i> Internet</li>
+                        <span class="sub-title">Caracteristicas del Servicio</span>
+                        <ul>
+                            <li class="text-white">Acceso a Internet todos los días del año en tarifa Plana</li>
+                            <li class="text-white">Navegación consumo ilimitado, NO bloqueamos las descargas</li>
+                            <li class="text-white">No requiere línea telefónica.</li>
+                            <li class="text-white">Cuentas de correo gratuitas.</li>
+                            <li class="text-white">Instalacion en 24 horas.</li>
+                            <li class="text-white">Soporte técnico rápido y eficiente.</li>
+                            <li class="text-white">Ultima Milla por Fibra Optica propia</li>
+                            <li class="text-white">Servicio Antipornografía y bloqueo de puertos según necesidad</li>
+                            <li class="text-white">Permisionarios autorizados por el ARCOTEL.</li>
+                            <li class="text-white">Planes corporativos con alto nivel de calidad y soporte escalable.</li>
+                            <li class="text-white">Asesoría en la implementación redes para la casa u oficina.</li>
+                            <li class="text-white">VPNs y enlaces dedicados.</li>
                         </ul>
 
-                        <div class="price">
-                            <span class="old-price">$42.99/mes</span>
-                            <span class="new-price">$35.99/mes</span>
-                        </div>
-
-                        <ul class="features-list">
-                            <li>Alquiler de línea y  {{ config('app.name','INTERNET') }} Talk incluidos</li>
-                            <li>+ tarifa única de instalación de $ 9.95</li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Solicitar presupuesto</a>
+                        
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
                     <div class="offer-time">
-                        <h2>Prisa! ESta oferta termina en poco tiempo:</h2>
-
-                        {{--  <div id="timer">
-                            <div id="days"></div>
-                            <div id="hours"></div>
-                            <div id="minutes"></div>
-                            <div id="seconds"></div>
-                        </div>  --}}
+                        <h2>INSTALACIÓN GRATIS! </h2>
+                        
                     </div>
                 </div>
             </div>

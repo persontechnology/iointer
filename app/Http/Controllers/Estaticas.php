@@ -52,7 +52,7 @@ class Estaticas extends Controller
             'mensaje' => 'required|string|max:255',
         ]);
 
-         Notification::route('mail', env('MAIL_USERNAME', 'david.criollo14@gmail.com'))
+         Notification::route('mail', env('MAIL_FROM_ADDRESS', 'patonet.isp@gmail.com'))
             ->notify(new EnviarContactoNoty($request));
 
         return response()->json(['success'=>'Mensaje enviado exitosamente']);
