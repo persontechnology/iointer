@@ -9,6 +9,9 @@
             <div class="card">
                 <div class="card-header">
                     Facturas
+                    <a href="{{ route('reportes',['fi'=>\Carbon\Carbon::now()->toDateString(),'ff'=>\Carbon\Carbon::now()->toDateString()]) }}" class="btn btn-info float-right" data-toggle="tooltip" data-placement="top" title="Reportes estadísticos">
+                        <i class="fas fa-chart-pie"></i>
+                    </a>
                 </div>
 
                 <div class="card-body">

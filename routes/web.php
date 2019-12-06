@@ -61,6 +61,7 @@ Route::get('/facturas-detalle/{factura}', 'Facturas@detalle')->name('facturaDeta
 Route::get('/facturas-realizar-factura/{user}', 'Facturas@realizarFactura')->name('realizarFactura');
 Route::post('/facturas-generar', 'Facturas@generar')->name('generarFactura');
 Route::get('/facturas-anular/{factura}', 'Facturas@anular')->name('anularFactura');
+Route::get('/facturas-anular', 'Facturas@reportes')->name('reportes');
 
 // soporte en linea
 Route::get('/soporte-en-linea', 'Estaticas@soporteEnLinea')->name('soporteEnLinea');

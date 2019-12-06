@@ -77,4 +77,23 @@ class Facturas extends Controller
         $request->session()->flash('info','Factura '.$factura->numero.' anulado exitosamente');
         return redirect()->route('facturaDetalle',$factura->id);
     }
+
+    public function reportes(Request $request)
+    {
+        $fi=$request->fi;
+        $ff=$request->ff;
+        $f_creados=Factura::whereBetween('fecha',[$fi,$ff])->where('estado','Creado')->get();
+        $f_entregado=Factura::whereBetween('fecha',[$fi,$ff])->where('estado','Entregado')->get();
+        $f_anulado=Factura::whereBetween('fecha',[$fi,$ff])->where('estado','Anulado')->get();
+        
+        $data = array(
+            'f_creados' => $f_creados,
+            'f_entregado'=>$f_entregado,
+            'f_anulado'=>$f_anulado ,
+            'fi'=>$fi,
+            'ff'=>$ff
+        );
+
+        return view('facturas.reportes',$data);
+    }
 }
