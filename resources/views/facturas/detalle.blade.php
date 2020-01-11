@@ -24,18 +24,19 @@
                         
                         <hr>
                         <p class="text-right">
-                                THE SPARTANS GYM <br>
-                                José Mejía y 11 de Noviembre Cuarto piso del edificio María José <br>
-                                MACHACHI <br>
-                                Tel: 0991143427 <br>
-                                gymspartamachachi@gmail.com
+                                Pato Net <br>
+                                Av: 19 de mayo y Eugenio Espejo
+                                 <br>
+                                La Maná <br>
+                                Tel: +(593) 939151912 <br>
+                                patonet.isp@gmail.com
                         </p>
                         <p>
                                 <strong>RUC:</strong> 0503652349 <br>
-                                <strong>CLIENTE:</strong> vilmer criollo <br>
-                                <strong>DIRECCIÓN:</strong> salcedo <br>
-                                <strong>TELÉFONO:</strong> 032730015 <br>
-                                <strong>FECHA:</strong> 2019-12-03 08:48:58 <br>
+                                <strong>CLIENTE:</strong> {{ $factura->user->nombres??'' }} {{ $factura->user->apellidos??'' }} <br>
+                                <strong>DIRECCIÓN:</strong> {{ $factura->user->direccion??'' }} <br>
+                                <strong>TELÉFONO:</strong> {{ $factura->user->telefono??'' }} <br>
+                                <strong>FECHA:</strong> {{ $factura->created_at }} <br>
                         </p>
 
                         <div class="table-responsive">
@@ -55,15 +56,26 @@
                                         <td>{{ $factura->plan->nombre }}</td>
                                         <td>1</td>
                                         <td>{{ $factura->valor }}</td>
-                                        <td>{{ $factura->valor }}</td>
+                                        <td>
+                                            {{ $factura->valor-($factura->valor*0.12) }}
+                                        </td>
                                     </tr>
                                     
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <td>Nota: <br> Factura: {{ $factura->estado }}</td>
-                                        <td colspan="3" class="text-right">TOTAL:</td>
+                                        <td colspan="3" class="text-right">
+                                            Subtotal:  <br>
+                                            Iva 12%: <br>
+                                            Total:                                    
+                                        </td>
                                         <td >
+                                            
+                                            {{ $factura->valor-($factura->valor*0.12) }}
+                                            <br>
+                                            {{ $factura->valor*0.12 }}
+                                            <br>
                                             {{ $factura->valor }}
                                         </td>
                                     </tr>

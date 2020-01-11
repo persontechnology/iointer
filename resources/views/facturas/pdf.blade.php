@@ -153,17 +153,17 @@ footer {
       
       <h1>Factura N: {{ $factura->numero }}</h1>
       <div id="company" class="clearfix">
-        <div>THE SPARTANS GYM</div>
-        <div>José Mejía y 11 de Noviembre Cuarto piso del edificio María José<br /> MACHACHI</div>
-        <div>Tel: 0991143427</div>
-        <div><a href="">gymspartamachachi@gmail.com</a></div>
+        <div>Pato Net</div>
+        <div>Av: 19 de mayo y Eugenio Espejo <br /> La Maná</div>
+        <div>Tel: +(593) 939151912</div>
+        <div>patonet.isp@gmail.com</div>
       </div>
       <div id="project">
         <div><span>RUC</span>{{$factura->user->cedula}}</div>
         <div><span>CLIENTE</span> {{ $factura->user->nombres }} {{ $factura->user->apellidos }}</div>
         <div><span>DIRECCIÓN</span> {{ $factura->user->direccion }}</div>
         <div><span>TÉLEFONO</span> {{ $factura->user->telefono }} </div>
-        <div><span>FECHA</span> {{ \Carbon\Carbon::now() }}</div>
+        <div><span>FECHA</span> {{ $factura->created_at }}</div>
       </div>
     </header>
     <main>
@@ -187,7 +187,7 @@ footer {
 	            
 	            <td class="qty">1</td>
 	            <td class="unit">{{ $factura->valor }}</td>
-	            <td class="total">{{ $factura->valor }}</td>
+	            <td class="total">{{ $factura->valor-($factura->valor*0.12) }}</td>
 	          </tr>
 
 
@@ -195,9 +195,21 @@ footer {
         <tfoot>
           
           <tr>
-            <td colspan="4" class="grand total">TOTAL</td>
-            <td class="grand total">$ {{ $factura->valor }}</td>
-          </tr>
+            <td>Nota: <br> Factura: {{ $factura->estado }}</td>
+            <td colspan="3" class="text-right">
+                Subtotal:  <br>
+                Iva 12%: <br>
+                Total:                                    
+            </td>
+            <td >
+                
+                {{ $factura->valor-($factura->valor*0.12) }}
+                <br>
+                {{ $factura->valor*0.12 }}
+                <br>
+                {{ $factura->valor }}
+            </td>
+        </tr>
         </tfoot>
       </table>
       <div id="notices">

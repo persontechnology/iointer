@@ -5,7 +5,7 @@
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>Soporte ne línea</h2>
+                <h2>Soporte en línea</h2>
                 <ul>
                     <li><a href="{{ url('/') }}">Inicio</a></li>
                     <li>Soporte en línea</li>
