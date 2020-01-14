@@ -95,10 +95,8 @@
                                     </p>
                                 </div>
                                 <ul class="social">
-                                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Pato-Net-101147531433772/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCSZT6bZL7ySZyVh6UrmR2LQ?fbclid=IwAR3WvVc74QRywTskDWfU1qxSF8GviDBW6EQaECDkf-ImHXbKQw5CXM8M198" target="_blank"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

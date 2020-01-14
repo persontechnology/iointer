@@ -104,15 +104,16 @@
                                 <label for="planes" class="col-md-4 col-form-label text-md-right">Selecione un plan</label>
     
                                 <div class="col-md-6">
+                                    <div class="select-box">
+                                        <select name="planes[]" id="" class="demo" style="display: none;">
+                                            @foreach ($planes as $p)    
+                                                <option value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'selected':'' }}>
+                                                    {{ $p->nombre }}
+                                                </option>
+                                            @endforeach
 
-                                    <select name="planes[]" id="" class="form-control">
-                                        @foreach ($planes as $p)    
-                                            <option value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'selected':'' }}>
-                                                {{ $p->nombre }}
-                                            </option>
-                                        @endforeach
-
-                                    </select>
+                                        </select>
+                                    </div>
                                     
                                 </div>
                             </div>
@@ -138,7 +139,11 @@
 </div>
 
 @push('linksCabeza')
-
+<style>
+    .demo{
+        width: 100%;
+    }
+</style>
 @endpush
 @prepend('linksPie')
     <script>

@@ -106,7 +106,7 @@
     
                                 <div class="col-md-6">
 
-                                    <select name="planes[]" id="" class="form-control">
+                                    <select name="planes[]" id="" class="demo" style="display: none;">
                                         @foreach ($planes as $p)
                                             
                                             <option value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'selected':'' }} {{ $c->hasPlan($p->id,$c->id)?'selected':'' }}>
@@ -141,7 +141,11 @@
 </div>
 
 @push('linksCabeza')
-
+<style>
+    .demo{
+        width: 100%;
+    }
+</style>
 @endpush
 @prepend('linksPie')
     <script>
