@@ -50,14 +50,16 @@ class Clientes extends Controller
             $user->telefono=$request->telefono;
             $user->email=$request->email;
             $user->direccion=$request->direccion;
-            $user->lat=$request->lat;
-            $user->lng=$request->lng;
+            $user->lat=$request->lat??0;
+            $user->lng=$request->lng??0;
             $user->save();
             $user->assignRole('Cliente');
             $user->planes()->sync($request->planes);
             $request->session()->flash('success','Nuevo cliente ingresado exitosamente');
         } catch (\Exception $th) {
-            $request->session()->flash('info','Nuevo cliente no ingresado');
+            
+            $request->session()->flash('info','Nuevo cliente no ingresado '.$th->getMessage());
+
         }
 
         return redirect()->route('clientes');

@@ -17,8 +17,8 @@
                     <div class="card-body">
                         <hr>
                         <div class="form-group float-right mb-2">
-                            <label for="" class="mb-2 text-danger"><strong>Ingrese número de factura</strong></label><br>
-                            <input class="border border-danger" name="numero" type="text" class="form-control" value="{{ $factura->numero }}" placeholder="" required>
+                            <label for="" class="mb-2 text-dark"><strong>Ingrese número de factura</strong></label><br>
+                            <input class="border border-dark" name="numero" type="text" class="form-control" value="{{ $factura->numero }}" placeholder="" required>
                         </div>
                             <h1 class="text-center">Factura N: {{ $factura->numero }}</h1>
                         
@@ -88,9 +88,13 @@
                         
                             <button type="submit" class="btn btn-primary">Generar factura</button>
                         
-                        
+                            @if ($factura->estado=='Creado')
+                            
+                            @else
                             <a href="{{ route('realizarFactura',$factura->id) }}" target="_blanck" class="btn btn-success">Imprimir factura</a>
-                            <a href="{{ route('anularFactura',$factura->id) }}" class="btn btn-danger">Anular factura</a>
+                            <a href="{{ route('anularFactura',$factura->id) }}" class="btn btn-danger">Anular factura</a>    
+                            @endif
+                            
                         
                     </div>
                 </div>

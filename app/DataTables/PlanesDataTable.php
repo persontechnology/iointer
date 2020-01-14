@@ -48,15 +48,7 @@ class PlanesDataTable extends DataTable
                     ->setTableId('planes-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    ->dom('Bfrtip')
-                    ->orderBy(1)
-                    
-                    ->buttons(
-                        Button::make('export'),
-                        Button::make('print'),
-                        Button::make('reset'),
-                        Button::make('reload')
-                    );
+                    ->parameters($this->getBuilderParameters());
     }
 
     /**
@@ -75,7 +67,8 @@ class PlanesDataTable extends DataTable
                   ->addClass('text-center'),
             // Column::make('id'),
             Column::make('nombre'),
-            Column::make('descripcion'),
+            Column::make('descripcion')
+            ->title('Descripción'),
             Column::make('valor'),
         ];
     }
