@@ -30,7 +30,7 @@ class Clientes extends Controller
 
     public function guardar(Request $request)
     {
-        
+
         $request->validate([
             'nombres' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
@@ -57,7 +57,7 @@ class Clientes extends Controller
             $user->planes()->sync($request->planes);
             $request->session()->flash('success','Nuevo cliente ingresado exitosamente');
         } catch (\Exception $th) {
-            
+
             $request->session()->flash('info','Nuevo cliente no ingresado '.$th->getMessage());
 
         }
@@ -103,11 +103,11 @@ class Clientes extends Controller
             'planes'    => 'nullable|array',
             'planes.*'  => 'nullable|exists:plans,id',
         ]);
-        
+
         $user=User::findOrFail($request->cliente);
         $this->authorize('editarCliente',$user);
          try {
-            
+
             $user->nombres=$request->nombres;
             $user->apellidos=$request->apellidos;
             $user->cedula=$request->cedula;

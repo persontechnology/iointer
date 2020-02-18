@@ -14,13 +14,13 @@
                         Nuevo cliente
                     </div>
                     <div class="card-body">
-                            
+
                             <div class="form-group row">
                                 <label for="nombres" class="col-md-4 col-form-label text-md-right">Nombres<i class="text-danger">*</i></label>
-    
+
                                 <div class="col-md-6">
                                     <input id="nombres" type="text" class="form-control @error('nombres') is-invalid @enderror" name="nombres" value="{{ old('nombres',$c->nombres) }}" required autocomplete="nombres" autofocus>
-    
+
                                     @error('nombres')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -28,13 +28,13 @@
                                     @enderror
                                 </div>
                             </div>
-    
+
                             <div class="form-group row">
                                 <label for="apellidos" class="col-md-4 col-form-label text-md-right">Apellidos<i class="text-danger">*</i></label>
-    
+
                                 <div class="col-md-6">
                                     <input id="apellidos" type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos" value="{{ old('apellidos',$c->apellidos) }}" required autocomplete="apellidos">
-    
+
                                     @error('apellidos')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -45,10 +45,10 @@
 
                             <div class="form-group row">
                                 <label for="cedula" class="col-md-4 col-form-label text-md-right">Cédula<i class="text-danger">*</i></label>
-    
+
                                 <div class="col-md-6">
                                     <input id="cedula" type="number" class="form-control @error('cedula') is-invalid @enderror" name="cedula" value="{{ old('cedula',$c->cedula) }}" required autocomplete="cedula">
-    
+
                                     @error('cedula')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -59,10 +59,10 @@
 
                             <div class="form-group row">
                                 <label for="telefono" class="col-md-4 col-form-label text-md-right">Teléfono</label>
-    
+
                                 <div class="col-md-6">
                                     <input id="telefono" type="number" class="form-control @error('telefono') is-invalid @enderror" name="telefono" value="{{ old('telefono',$c->telefono) }}" autocomplete="telefono">
-    
+
                                     @error('telefono')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -74,10 +74,10 @@
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
-    
+
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email',$c->email) }}" autocomplete="email">
-    
+
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -88,10 +88,10 @@
 
                             <div class="form-group row">
                                 <label for="direccion" class="col-md-4 col-form-label text-md-right">Dirección<i class="text-danger">*</i> </label>
-    
+
                                 <div class="col-md-6">
                                     <input id="direccion" type="direccion" class="form-control @error('direccion') is-invalid @enderror" name="direccion" value="{{ old('direccion',$c->direccion) }}" autocomplete="direccion" required>
-                                    
+
                                     @error('direccion')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -99,24 +99,20 @@
                                     @enderror
                                 </div>
                             </div>
-                            
+
                             @if (count($planes))
                             <div class="form-group row">
                                 <label for="planes" class="col-md-4 col-form-label text-md-right">Selecione un plan</label>
-    
+
                                 <div class="col-md-6">
-
-                                    <select name="planes[]" id="" class="demo" style="display: none;">
-                                        @foreach ($planes as $p)
-                                            
-                                            <option value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'selected':'' }} {{ $c->hasPlan($p->id,$c->id)?'selected':'' }}>
-                                                {{ $p->nombre }}
-                                            </option>
-
-                                        @endforeach
-                                        
-
-                                    </select>
+                                    @foreach ($planes as $p)
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="planes[{{ $p->id }}]"  value="{{ $p->id }}" {{ old('planes.'.$p->id)==$p->id ?'checked':'' }} {{ $c->hasPlan($p->id,$c->id)?'checked':'' }}  type="checkbox" value="" id="plan_{{ $p->id }}">
+                                            <label class="form-check-label" for="plan_{{ $p->id }}">
+                                            {{ $p->nombre }} <small class="text-info">$ {{ $p->valor }}</small>
+                                            </label>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                             @else
@@ -149,15 +145,15 @@
 @endpush
 @prepend('linksPie')
     <script>
-    $('#menuPlanes').addClass('active');  
+    $('#menuPlanes').addClass('active');
     </script>
-    
+
     <script>
 
             // The following example creates a marker in Stockholm, Sweden using a DROP
             // animation. Clicking on the marker will toggle the animation between a BOUNCE
             // animation and no animation.
-        
+
             var marker;
             var  lat_c={{ $c->lat}};
             var  lng_c={{ $c->lng}};
@@ -166,22 +162,22 @@
                 zoom: 15,
                 center: {lat: lat_c, lng: lng_c}
                 });
-        
+
                 marker = new google.maps.Marker({
                 map: map,
                 draggable: true,
                 animation: google.maps.Animation.DROP,
                 position: {lat: lat_c, lng: lng_c}
                 });
-                
+
                 marker.addListener('drag', function(event){
                     $('#lat').val(event.latLng.lat());
                     $('#lng').val(event.latLng.lng());
                 });
             }
-        
+
             </script>
-    
+
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Ko6qUa0EFuDWr77BpNJOdxD-QLstjBk&callback=initMap">
         </script>
 @endprepend
